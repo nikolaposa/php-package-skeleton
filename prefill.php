@@ -4,16 +4,16 @@ define('COL_HELP', 1);
 define('COL_DEFAULT', 2);
 
 $fields = [
-    'author_name' =>            ['Your name',             '',                                                ''],
-    'author_github_username' => ['Your Github username',  '<username> in https://github.com/username',       ''],
-    'author_email' =>           ['Your email address',    '',                                                ''],
-    'author_website' =>         ['Your website',          '',                                                'https://github.com/{author_github_username}'],
+    'author_name' => ['Your name', '', ''],
+    'author_github_username' => ['Your Github username','<username> in https://github.com/username', ''],
+    'author_email' => ['Your email address', '', ''],
+    'author_website' => ['Your website', '', 'https://github.com/{author_github_username}'],
 
-    'package_vendor' =>         ['Package vendor',        '<vendor> in https://github.com/vendor/package',   '{author_github_username}'],
-    'package_name' =>           ['Package name',          '<package> in https://github.com/vendor/package',  ''],
-    'package_description' =>    ['Package very short description',   '',                                     ''],
+    'package_vendor' => ['Package vendor', '<vendor> in https://github.com/vendor/package', '{author_github_username}'],
+    'package_name' => ['Package name', '<package> in https://github.com/vendor/package', ''],
+    'package_description' => ['Package very short description', '', ''],
 
-    'psr4_namespace' =>         ['PSR-4 namespace',       'usually, Vendor\\Package',                        '{package_vendor}\\{package_name}'],
+    'psr4_namespace' => ['PSR-4 namespace', 'usually, Vendor\\Package', '{package_vendor}\\{package_name}'],
 ];
 
 $values = [];
@@ -22,30 +22,33 @@ $replacements = [
     ':vendor\\\\:package_name\\\\' => function () use (&$values) {
         return str_replace('\\', '\\\\', $values['psr4_namespace']) . '\\\\';
     },
-    ':author_name'                 => function () use (&$values) {
+    ':author_name' => function () use (&$values) {
         return $values['author_name'];
     },
-    ':author_username'             => function () use (&$values) {
+    ':author_username' => function () use (&$values) {
         return $values['author_github_username'];
     },
-    ':author_website'              => function () use (&$values) {
+    ':author_website' => function () use (&$values) {
         return $values['author_website'] ?: ('https://github.com/' . $values['author_github_username']);
     },
-    ':author_email'                => function () use (&$values) {
+    ':author_email' => function () use (&$values) {
         return $values['author_email'] ?: ($values['author_github_username'] . '@example.com');
     },
-    ':vendor'                      => function () use (&$values) {
+    ':vendor' => function () use (&$values) {
         return $values['package_vendor'];
     },
-    ':package_name'                => function () use (&$values) {
+    ':package_name' => function () use (&$values) {
         return $values['package_name'];
     },
-    ':package_description'         => function () use (&$values) {
+    ':package_description' => function () use (&$values) {
         return $values['package_description'];
     },
-    'PackageSkeleton'              => function () use (&$values) {
+    'PackageSkeleton' => function () use (&$values) {
         return $values['psr4_namespace'];
     },
+    'nikolaposa/php-package-skeleton' => function () use (&$values) {
+        return $values['package_vendor'] . '/' . $values['package_name'];
+    }
 ];
 
 function read_from_console($prompt)

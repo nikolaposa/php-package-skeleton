@@ -46,9 +46,6 @@ $replacements = [
     'PackageSkeleton' => function () use (&$values) {
         return $values['psr4_namespace'];
     },
-    'nikolaposa/php-package-skeleton' => function () use (&$values) {
-        return $values['package_vendor'] . '/' . $values['package_name'];
-    }
 ];
 
 function read_from_console($prompt)

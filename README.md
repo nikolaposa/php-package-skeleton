@@ -11,7 +11,7 @@
 1. `$ cd my-library`
 1. `$ rm -rf .git`
 1. Replace ```:author_name``` ```:author_username``` ```:author_email``` ```:author_website``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE](LICENSE), [composer.json](composer.json) and [phpunit.xml.dist](phpunit.xml.dist) files either manually or by running `$ php prefill.php` in the command line.
-`$ composer install`
+1. `$ composer install`
 1. Delete this paragraph and prefill.php.
 
 This is where your library description should be.

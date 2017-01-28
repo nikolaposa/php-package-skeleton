@@ -111,6 +111,9 @@ do {
 echo "\n";
 
 $files = array_merge(
+    [
+        __DIR__ . '/LICENSE',
+    ],
     glob(__DIR__ . '/*.md'),
     glob(__DIR__ . '/*.xml.dist'),
     glob(__DIR__ . '/composer.json'),

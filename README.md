@@ -27,7 +27,7 @@ composer require :vendor/:package_name
 ## Usage
 
 ``` php
-$example = new NPosa\Skeleton\Example();
+$example = new PackageSkeleton\Example();
 echo $example->say('Hello');
 ```
 

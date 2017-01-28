@@ -41,10 +41,10 @@ echo $example->say('Hello');
 Released under MIT License - see the [License File](LICENSE) for details.
 
 
-[ico-version]: https://poser.pugx.org/nikolaposa/rate-limit/v/stable
+[ico-version]: https://img.shields.io/packagist/v/:vendor/:package_name.svg
 [ico-build]: https://travis-ci.org/:vendor/:package_name.svg?branch=master
-[ico-code-coverage]: https://scrutinizer-ci.com/g/:vendor/:package_name/badges/coverage.png?b=master
-[ico-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name/badges/quality-score.png?b=master
+[ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg
 
 [link-packagist]: https://packagist.org/packages/:vendor/:package_name
 [link-build]: https://travis-ci.org/:vendor/:package_name

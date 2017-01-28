@@ -1,35 +1,28 @@
-language: php
-
-php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - hhvm
-
-# This triggers builds to run on the new TravisCI infrastructure.
-# See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: false
 
-## Cache composer
+language: php
+
 cache:
   directories:
     - $HOME/.composer/cache
 
 matrix:
   include:
-    - php: 5.6
-      env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
+    - php: 7
+      env:
+        - EXECUTE_CS_CHECK=true
+        - EXECUTE_TEST_COVERALLS=true
+    - php: 7.1
+    - php: hhvm
+  allow_failures:
+    - php: hhvm
 
-before_script:
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+install:
+  - travis_retry composer install --no-interaction
 
 script:
-  - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+  - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/phpunit --disallow-test-output --report-useless-tests --coverage-clover ./clover.xml ; else ./vendor/bin/phpunit --disallow-test-output ; fi
+  - if [[ $EXECUTE_CS_CHECK == 'true' ]]; then ./vendor/bin/php-cs-fixer fix -v --diff --dry-run ; fi
 
 after_script:
-  - |
-    if [[ "$TRAVIS_PHP_VERSION" != 'hhvm' && "$TRAVIS_PHP_VERSION" != '7.0' ]]; then
-      wget https://scrutinizer-ci.com/ocular.phar
-      php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-    fi
+  - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./clover.xml ; fi

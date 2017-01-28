@@ -1,62 +1,28 @@
 # :package_name
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-build]][link-build]
+[![Code Quality][ico-code-quality]][link-code-quality]
+[![Code Coverage][ico-code-coverage]][link-code-coverage]
+[![Latest Version][ico-version]][link-packagist]
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
+**Important:** Replace ```:author_name``` ```:author_username``` ```:author_email``` ```:author_website``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE](LICENSE), [composer.json](composer.json) and [phpunit.xml.dist](phpunit.xml.dist) files either manually or by running `$ php prefill.php` in the command line. Delete this paragraph and prefill.php afterwards.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This is where your library description should be.
 
-## Structure
+## Installation
 
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
+The preferred method of installation is via [Composer](http://getcomposer.org/). Run the following command to install the latest version of a package and add it to your project's `composer.json`:
 
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
-
-## Install
-
-Via Composer
-
-``` bash
-$ composer require :vendor/:package_name
+```bash
+composer require :vendor/:package_name
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$example = new NPosa\Skeleton\Example();
+echo $example->say('Hello');
 ```
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
 
 ## Credits
 
@@ -65,19 +31,17 @@ If you discover any security related issues, please email :author_email instead 
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Released under MIT License - see the [License File](LICENSE) for details.
 
-[ico-version]: https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/:vendor/:package_name/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
+
+[ico-version]: https://poser.pugx.org/nikolaposa/rate-limit/v/stable
+[ico-build]: https://travis-ci.org/:vendor/:package_name.svg?branch=master
+[ico-code-coverage]: https://scrutinizer-ci.com/g/:vendor/:package_name/badges/coverage.png?b=master
+[ico-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name/badges/quality-score.png?b=master
 
 [link-packagist]: https://packagist.org/packages/:vendor/:package_name
-[link-travis]: https://travis-ci.org/:vendor/:package_name
-[link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
+[link-build]: https://travis-ci.org/:vendor/:package_name
+[link-code-coverage]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/:vendor/:package_name
 [link-author]: https://github.com/:author_username
 [link-contributors]: ../../contributors

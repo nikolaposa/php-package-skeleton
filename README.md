@@ -6,6 +6,7 @@
 [![Latest Version][ico-version]][link-packagist]
 
 **Setup:** 
+
 1. `$ git clone --depth=1 https://github.com/nikolaposa/php-package-skeleton my-library`
 1. `$ cd my-library`
 1. `$ rm -rf .git`

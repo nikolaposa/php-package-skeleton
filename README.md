@@ -4,6 +4,7 @@
 [![Code Quality][ico-code-quality]][link-code-quality]
 [![Code Coverage][ico-code-coverage]][link-code-coverage]
 [![Latest Version][ico-version]][link-packagist]
+[![PDS Skeleton][ico-pds]][link-pds]
 
 **Setup:** 
 
@@ -45,10 +46,12 @@ Released under MIT License - see the [License File](LICENSE) for details.
 [ico-build]: https://travis-ci.org/:vendor/:package_name.svg?branch=master
 [ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg
+[ico-pds]: https://img.shields.io/badge/pds-skeleton-blue.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/:vendor/:package_name
 [link-build]: https://travis-ci.org/:vendor/:package_name
 [link-code-coverage]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
+[link-pds]: https://github.com/php-pds/skeleton
 [link-author]: https://github.com/:author_username
 [link-contributors]: ../../contributors

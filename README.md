@@ -46,7 +46,7 @@ Released under MIT License - see the [License File](LICENSE) for details.
 [ico-build]: https://travis-ci.org/:vendor/:package_name.svg?branch=master
 [ico-code-coverage]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg
-[ico-pds]: https://img.shields.io/badge/pds-skeleton-blue.svg?style=flat-square
+[ico-pds]: https://img.shields.io/badge/pds-skeleton-blue.svg
 
 [link-packagist]: https://packagist.org/packages/:vendor/:package_name
 [link-build]: https://travis-ci.org/:vendor/:package_name
